@@ -5,7 +5,7 @@ import time
 
 arduino = serial.Serial('/dev/ttyACM0', 9600)
 while True:
-  req = urllib2.Request('http://sys.bugs3.com/server/sys/controller/TOTP.php')
+  req = urllib2.Request('http://internetdelascosas.freeiz.com/test.php')
   response = urllib2.urlopen(req)
   code  = str(response.read())
   code = code[0:6]
