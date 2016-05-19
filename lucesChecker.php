@@ -4,7 +4,7 @@ $query = "select * from luces";
 $result = mysqli_query($mysqli,$query);
 $sql = "DELETE FROM luces WHERE luz1='luce1e' or luz1='luce1a'";
 mysqli_query($mysqli, $sql);
-$sql = "DELETE FROM luces WHERE luz2='luce2e' or luz1='luce2a'";
+$sql = "DELETE FROM luces WHERE luz2='luce2e' or luz2='luce2a'";
 mysqli_query($mysqli, $sql);
 $titles = array();
 $titles2 = array();
@@ -26,7 +26,7 @@ if (strcmp($titlestring, $var) !== 0) {
     echo $titlestring;
 }
 $var = "luce2a";
-if (strcmp($titlestring, $var) !== 0){
+if (strcmp($titlestring2, $var) !== 0){
     $sql = "INSERT INTO luces (luz2) VALUES ('luce2e')";
     mysqli_query($mysqli, $sql);
     echo $titlestring2;

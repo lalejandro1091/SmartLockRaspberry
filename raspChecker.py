@@ -8,21 +8,21 @@ pascode = "luce1a"
 pascode1 = "luce2a"
 while True:
   requ = urllib2.Request('http://localhost/php/lucesChecker.php')
-  response1 = urllib2.urlopen(req).read()
+  response1 = urllib2.urlopen(requ).read()
   code1  = response1.find("luce1e")
-  print response
-  print code
-  if pascode != code1:
+  print response1
+  print code1
+  if pascode == code1:
     arduino.write("luce1e")
     print 'se prende'
-  else
+  else:
     arduino.write("luce1a")
     print 'se apaga'
   code = response1.find("luce2e")
-  if pascode1 != code1:
+  if pascode1 == code1:
     arduino.write("luce2e")
     print 'se prende'
-  else
+  else:
     arduino.write("luce2a")
     print 'se apaga'
   time.sleep(2)
